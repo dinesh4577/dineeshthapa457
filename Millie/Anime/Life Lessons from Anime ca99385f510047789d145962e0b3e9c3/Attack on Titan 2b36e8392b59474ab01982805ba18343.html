@@ -1,0 +1,645 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Attack on Titan</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2b36e839-2b59-474a-b019-82805ba18343" class="page sans"><header><img class="page-cover-image" src="Attack%20on%20Titan%202b36e8392b59474ab01982805ba18343/5b262629a153363a7f0e150a6ca9dffb.png" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Attack%20on%20Titan%202b36e8392b59474ab01982805ba18343/attack-on-titan-levy-mcgarden-pz-1280x1024.jpg"/></div><h1 class="page-title">Attack on Titan</h1></header><div class="page-body"><p id="574f0f6d-9bfd-457a-bfff-1abcaea9f101" class="block-color-brown_background"><em>“There is no truth in this world. Anyone can become a God or a Devil. All it takes is for someone to claim that to be the truth.”</em></p><p id="d9e0d8ef-2a1e-4d14-87a8-2e13cdf5e84b" class=""><em><strong>That is one of the quotes I&#x27;ll remember most in AoT, because it is the closest thing to how our own reality works. I felt like Kruger was talking to us in that moment. And isn&#x27;t that the truth? Anyone can say anything, even the dumbest thing and all it takes is for them to say it louder than anyone else and to have the most people believing it, or the more power, and it becomes the universal truth.</strong></em></p><p id="60718757-94c5-4892-91ba-e9375994c14c" class="">And in AoT just like in our world, this is said in a “Winner writes history&quot; context. As of this moment, nobody really knew if the Eldians were bad people or victims. Marley had its own, official version that said Eldians were sinners who unleashed atrocities upon other countries.</p><p id="08a18931-a676-4d8f-acc1-14979c8c20e7" class="">This makes me think of a quote from Napoleon that says, &#x27;What is history, but a fable agreed upon?”</p><p id="1a23db58-c574-4684-a775-e2c73eba368a" class="">One of the best moment in the show.</p><ol type="1" id="2afd2a1e-8d39-48fd-a5fd-7f81812be7a9" class="numbered-list" start="1"><li>Learn to let stuff from the past go, forgive but never forget</li></ol><ol type="1" id="6fbfeba7-33f4-424f-861e-f8e79e1b65ab" class="numbered-list" start="2"><li>Find something you love and let it consume you</li></ol><ol type="1" id="06622848-6a5d-42de-b8e7-7b0e7d5a1cdf" class="numbered-list" start="3"><li>Never devalue the worth of hard work and perseverance</li></ol><ol type="1" id="22a5dc83-0f78-4d1b-b199-6ff73fcd16a9" class="numbered-list" start="4"><li>Value your friends, they will bring out the best in you, but don&#x27;t develop a dependance on them</li></ol><p id="9a5d38d6-527a-44d7-b690-1d793dfc8a81" class="">As someone who grew up watching <em>shoujo</em> (romance and friendship) anime, the most I’ve ever ventured into the <em>shounen</em> (adventure and action) side was Haikyuu. When my friend introduced me to Attack On Titan a year ago, the first thing that came to my mind after seeing the creepy titans’ faces was <em>hell no</em><em>. </em>However with much convincing, I finally decided to watch the series on <a href="https://www.netflix.com/title/70299043">Netflix</a>. Before I realised, I was bingeing episodes without pausing, and it snuck its way up to be one of my favourite animes to date.</p><p id="17babb21-8107-4484-b1ff-9e4d0ebafdfd" class="">After overcoming the barrier of scary-looking titans (a race of humanoid giants that eat humans), the concepts in Attack On Titan intrigued me. The story follows a boy named Eren Jeager, who hopes for humanity within the walls of his home so as to be free of the titans that live beyond them. He joins the survey corps and vows to kill every last titan. In the quest to uncover the truth, the plot becomes more complicated, revealing a war between 2 races of humans instead.</p><p id="880b4507-2cd9-436b-a4c4-958f2019fc6b" class="">Despite being set in a fictional world, the characters have taught us many life lessons such as friendship, loyalty and sacrifice. As we eagerly wait for the last few episodes of the final season to air, let’s recap from season 1 and find out what we’ve learnt so far.</p><h3 id="677649b8-5af2-4e59-b7cf-76905a9898c7" class="block-color-purple_background"><strong>1. Persevere even when everyone loses hope in you</strong></h3><figure id="c0605cd2-5575-4ee0-b8b2-688ffd7b21b7" class="image"><a href="https://zula.sg/wp-content/uploads/2021/05/AOT1.jpg"><img src="https://zula.sg/wp-content/uploads/2021/05/AOT1.jpg"/></a></figure><p id="702547d8-0926-44e3-9473-b912b8f3099e" class=""><em>Eren being unable to balance on the omnidirectional mobility wires</em></p><p id="5d2d8296-cf25-4748-b196-92f7487bdeba" class="">During Eren’s cadet corps training, the soldiers were assigned to balance on the omnidirectional mobility wires. Head instructor Keith Shadis states that this skill is the “bare fundamentals” of being a soldier. While most people were able to succeed, Eren was the only one who couldn’t, constantly being twisted upside down and falling on his head.</p><p id="acab1430-34ae-4e7e-a75b-3ddaf93965e8" class="">Eren was humiliated and embarrassed, being laughed at by his fellow soldiers and reprimanded by Keith. Many people mocked him and hoped that he would quit even though it was just the beginning.</p><figure id="dd5c974a-94dd-4240-9f60-1b050478e95d" class="image"><a href="https://zula.sg/wp-content/uploads/2021/05/AOT2.jpg"><img src="https://zula.sg/wp-content/uploads/2021/05/AOT2.jpg"/></a></figure><p id="dca456ee-864a-4f48-8ae7-ed78d1fc5a3a" class=""><em>Eren finally succeeding in balancing on the wires</em></p><p id="41f7bbd1-a153-43e8-88d2-ff7f70dc84a3" class="">Despite the negativity, Eren stayed back after training to continue practicing. On the day of the assessment, Eren finally succeeded in remaining upright, yet he fell down again after a few seconds.</p><p id="3a11ffff-201f-4349-b06b-80a6e8558d82" class="">It was only after Keith had ordered Eren to change his equipment that they discovered Eren’s original belt had a broken clasp. After changing it, Eren managed to balance with no trouble. The other soldiers were impressed, realising that Eren could succeed even with the broken equipment.</p><p id="b9edd6e0-7f00-4ac7-9dd6-556fc4001542" class="">It’s important to learn to persevere even when nobody believes you can succeed. Motivating yourself and proving others wrong will always be rewarding. As Eren says, “I might not have raw aptitude, but no one has more guts than I do!”</p><h3 id="801349d1-7353-446c-9837-e377517dcfc5" class="block-color-purple_background"><strong>2</strong>. <strong>Our enemies aren’t always clear as black and white</strong></h3><figure id="8934bdbf-ff4a-464a-b9cb-e0ea684f511d" class="image"><a href="https://zula.sg/wp-content/uploads/2021/05/AOT3.jpg"><img src="https://zula.sg/wp-content/uploads/2021/05/AOT3.jpg"/></a></figure><p id="c015e66a-f880-4229-bac0-ae81cf51ee75" class=""><em>Eren brushing away Reiner’s confession</em></p><p id="fca47c92-762b-4dc1-a34c-d684f1a1e90b" class="">Eren has always grown up hating and vowing to kill all titans, certain that they were the reason humanity could not be free. However, one of the earliest plot twists of Attack On Titan was revealed: Abnormal Titans are actually humans who can transform.</p><p id="fb1606c5-0ea5-4928-be13-2b7a59a38ec5" class="">In Reiner’s desperation, he revealed to Eren that he is the Armoured Titan and Bertolt is the Colossal Titan. Unwilling to believe that his close friends were actually his enemies, Eren simply came up with an excuse by asking “you’re just tired, aren’t you?”</p><figure id="a1fba73e-b3e9-4a4b-9e4f-fe274fb68c73" class="image"><a href="https://zula.sg/wp-content/uploads/2021/05/AOT4.jpg"><img src="https://zula.sg/wp-content/uploads/2021/05/AOT4.jpg"/></a></figure><p id="ffcd30a2-1eec-4e2a-9ad9-f8951916ae74" class=""><em>Eren crying when he realises he has to fight his friends</em></p><p id="f7c6f776-34c9-4a5e-9b21-335b2c2459e2" class="">After watching Reiner and Bertolt transform into titans right in front of him, Eren is struck with the realisation that they were enemy spies the whole time. Overcome with betrayal and sadness, Eren cries right before transforming into the attack titan to fight them.</p><p id="3d6c98c3-0860-45e1-965d-4bdd5158df55" class="">Our enemies aren’t always who we think they are—sometimes they can be the people among us. While Eren has always believed that titans were his only enemy, the reality of who our enemies really are isn’t that simple.</p><h3 id="fa2785eb-c4c7-41c6-b408-9d1cf5a07715" class="block-color-purple_background"><strong>3. Don’t underestimate someone else’s pain and struggles</strong></h3><figure id="86b85819-2623-4d0f-8c41-6d41d2d1b129" class="image"><a href="https://zula.sg/wp-content/uploads/2021/05/AOT7.jpg"><img src="https://zula.sg/wp-content/uploads/2021/05/AOT7.jpg"/></a></figure><p id="1a586bee-6948-4a14-8c26-f5d8e184f3c0" class=""><em>Dieter accusing Levi of being heartless</em></p><p id="c338ed12-4da6-45dd-b6cc-0e63c6ed507b" class="">Captain Levi Ackerman has always been known to be cold and harsh through growing up in the Underground City, a.k.a the slums. During one of the scouts’ missions outside the walls, Dieter wanted to retrieve the body of his close friend, Ivan, who had died.</p><p id="c51e85b9-1782-4cac-8696-f8e61d3c8998" class="">However, Levi and Erwin strongly protested as they needed to continue on with their mission. Upon hearing this, Dieter angrily accuses them of not having any human feelings. This accusation was made right after Levi had just lost his entire squad to the Female Titan.</p><figure id="7d877c5d-ad6c-4e67-979b-a7b7ceb3c7f4" class="image"><a href="https://zula.sg/wp-content/uploads/2021/05/AOT8.jpg"><img src="https://zula.sg/wp-content/uploads/2021/05/AOT8.jpg"/></a></figure><p id="ad769e62-2916-4938-9e9c-81f9e5fa067f" class=""><em>Levi giving Dieter Ivan’s scout badge</em></p><p id="34fb4607-1e70-4a79-8ffc-4200ff943b5f" class="">Going against Erwin and Levi’s words, Dieter went ahead to retrieve Ivan’s body. He was then chased by titans, resulting in the death of another friend. Seeing Dieter suffering, Levi goes over to him and produces Ivan’s scout badge, saying that to him, the badge alone was proof that they once lived.</p><p id="fd32873f-8a57-4060-84cd-ab261d2bae82" class="">Dieter realised his mistake and burst into tears. Levi was only doing what was best for everyone while still making sure they are all accounted for. As humanity’s strongest soldier, Levi has constantly been suffering from many tragic losses which the other soldiers do not see. Even though he was also mourning the death of his special ops squad, Levi shows us the importance of moving on and fighting for what we believe in.</p><h3 id="b223b783-19bc-4ee1-950c-2537ec8b2cba" class="block-color-pink_background"><strong>4. With love there will always be sacrifice</strong></h3><figure id="3629c1bf-7086-4358-a20a-e3b866fdb98d" class="image"><a href="https://zula.sg/wp-content/uploads/2021/05/AOT19.jpg"><img src="https://zula.sg/wp-content/uploads/2021/05/AOT19.jpg"/></a></figure><p id="bbe5d0b5-1ce0-450c-8c9d-e6a799ebd5e8" class=""><em>Ymir saying her last goodbye to Historia</em></p><p id="1a6f05a1-03df-4b92-8f59-90d23d86c0d0" class="">Ymir and Historia are an interesting pair that will forever be remembered. Both of them suffer as victims of their circumstances, being forced to adopt fake personas against their will. While they forged a strong bond of friendship and love with each other, Ymir had to eventually let Historia go during one of the scout’s missions.</p><p id="3451d1c0-7ded-4282-8b01-8fe454630447" class="">Understanding Reiner and Bertolt’s struggles and finding out they wanted to use Historia to gain information about the Founding Titan, Ymir sacrificed her life. In an emotional scene of her last moments with Historia, Ymir gently caressed her in her titan form and said “I’m sorry” before leaving.</p><p id="c26739c8-be87-41ca-8ae8-e4761725ef8b" class="">Sometimes, love and sacrifice goes hand in hand. In order to protect the ones we love, we may choose to give up the bigger things in life to make them happy.</p><h3 id="2d84e21c-fe90-45a1-b98a-51aa40a8b484" class="block-color-purple_background"><strong>5. Sometimes we lose ourselves in the desire to find the truth</strong></h3><figure id="d43330a7-aa19-47b4-8175-08663c8b800c" class="image"><a href="https://zula.sg/wp-content/uploads/2021/05/AOT5.jpg"><img src="https://zula.sg/wp-content/uploads/2021/05/AOT5.jpg"/></a></figure><p id="05475694-cf1a-4267-88f8-c5848d87a690" class=""><em>Erwin suffering from survivor’s guilt</em></p><p id="3ccf3d18-5192-49c5-b6a6-12d60eae0628" class="">As a child, Erwin Smith strongly believed in his father’s theory that more humans lived beyond the walls. Unfortunately, after revealing too much, Erwin’s father was silenced and killed by the military police.</p><p id="d01ebec4-5175-4406-844f-f9939bfc8a72" class="">Growing up and becoming the commander of the scouts, Erwin has lived his whole life desperately searching for proof that his father’s theory was true. He suffered tremendously from guilt, feeling that his selfish desire had resulted in the death of too many soldiers under him.</p><figure id="92cc24d9-9175-4592-9873-4a486683db49" class="image"><a href="https://zula.sg/wp-content/uploads/2021/05/AOT6.jpg"><img src="https://zula.sg/wp-content/uploads/2021/05/AOT6.jpg"/></a></figure><p id="3452e9d8-1b65-4aea-afbf-018fb9fbe3ef" class="">While revealing his inner turmoil to Levi, this is where Levi’s iconic line comes into play—”Erwin, give up on your dream and die”. Erwin finally decides the ultimate sacrifice for the truth: his life. He leads the whole squad to their death, distracting the Beast Titan so that Levi can take him down.</p><p id="d1f7ed92-a1dd-4410-9fcc-7343847e5f3f" class="">Though it’s a shame that Erwin died when he was so close to finding the truth in Eren’s basement, his noble decision made us realise why we love his character so much. Erwin has lost too much of himself to continue on and he accepted that.</p><h3 id="3d06a1d0-a318-4767-a8bf-2466b27de8b4" class="block-color-purple_background"><strong>6. Trust in yourself to make the right decision</strong></h3><figure id="fe03212c-d990-4256-b601-c4d772f4414d" class="image"><a href="https://zula.sg/wp-content/uploads/2021/05/AOT10.jpg"><img src="https://zula.sg/wp-content/uploads/2021/05/AOT10.jpg"/></a></figure><p id="a3c0dd47-30af-40d0-8bcf-f779773db1f6" class=""><em>Eren fighting with Levi over the titan spinal fluid serum</em></p><p id="f37fa062-b17e-4b3b-9af3-f818a1704108" class="">Watching Levi fight Eren and Mikasa in season 3 had us all on the edge of our seats. Levi was faced with the most difficult decision of all time, with only 1 serum to spare for 2 dying comrades. While I was quite certain that Erwin was about to be saved, Levi stunned us by injecting Armin with the serum instead.</p><p id="c16747fe-581b-4053-8ae8-5b8ce43f6084" class="">Though Levi feels strongly for Erwin, he had to let him go and trust that his decision to save Armin instead would be the right choice. Though it’s always hard to make major decisions, you should always trust yourself to make the final call and go through with it till the end.</p><p id="1dda37a6-346b-4635-939d-d6ea10459143" class=""><strong>Also read:</strong></p><h3 id="a586a8c3-2391-48a9-86f0-7d661a131708" class="block-color-purple_background"><strong>7. Freedom is sometimes just an illusion</strong></h3><figure id="6d521a18-5cd8-4086-b3e3-8eea77af67b4" class="image"><a href="https://zula.sg/wp-content/uploads/2021/05/AOT11.jpg"><img src="https://zula.sg/wp-content/uploads/2021/05/AOT11.jpg"/></a></figure><p id="bd9d2533-9e7d-4c93-b27d-b5acdd6ae292" class=""><em>Eren, Armin and Mikasa finally discovering the sea</em></p><p id="fb22ea4c-7caf-47fb-a802-c2be17d62a47" class="">As kids, Armin and Eren have always thought of the sea as a symbol of freedom, beyond the walls and out of their reach. However, when the scouts finally discovered the sea for the first time, Eren was faced with feelings of uncertainty.</p><p id="865fc4e5-b603-444e-a88f-480f73937202" class="">The scouts realised that it was never just a simple battle of humans against titans. They are Eldians, an oppressed race and seen as “island devils” who are shunned by the rest of the world. Going beyond the walls meant that they had to start war, with the burden of saving the world lying on them.</p><p id="2b1add32-977d-4644-a090-c98661255455" class="">Instead of freedom, Eren becomes more trapped. The concept of freedom becomes an unattainable illusion, stealing away his childhood innocence. Sometimes in our desire to be free, we fail to see the underlying harsh reality of the circumstances.</p><h3 id="f95a957b-64b5-40a8-8df4-11139aba53b6" class="block-color-pink_background"><strong>8. Those in power will always try to control the narrative</strong></h3><figure id="0af2c986-6e34-4b15-8ea4-597ac6c5dbc3" class="image"><a href="https://zula.sg/wp-content/uploads/2021/05/AOT12.jpg"><img src="https://zula.sg/wp-content/uploads/2021/05/AOT12.jpg"/></a></figure><p id="d3581286-a54f-4017-8124-da6934965382" class=""><em>Kenny’s grandfather telling Kenny the truth about the Founding Titan</em></p><p id="9399f4bc-f8d8-4477-9f4f-95101425b3c7" class="">Through Kenny’s grandfather, we discovered that King Fritz made use of the Founding Titan to erase the memory of all Eldians. The Founding Titan is then passed down from generations of the royal family to prevent humanity from learning the truth of their existence behind the walls.</p><p id="8dcb76b7-dd3b-43b9-b1e4-5fb296c27a26" class="">Meanwhile in Marley, the remaining Eldians are oppressed and forced to live as slaves to Marleyans simply because of their race. This shows us that those in power, such as the royal family and the Marleyans, will always be able to manipulate people according to how they want. Just like in real life, there will always be people who twist and turn reality to benefit them.</p><h3 id="5036671d-ab20-450c-b6ae-5710058533d1" class="block-color-purple_background"><strong>9. Fights are never just a one-sided battle</strong></h3><figure id="1c16b471-1aba-4f1e-9ec7-760d7befd1cf" class="image"><a href="https://zula.sg/wp-content/uploads/2021/05/AOT13.jpg"><img src="https://zula.sg/wp-content/uploads/2021/05/AOT13.jpg"/></a></figure><p id="2220b1c1-4920-4270-b03f-a0beec8a0b83" class=""><em>Bertolt reminding Reiner they’re on a warrior mission</em></p><p id="b2e19a6c-04dc-4c19-8a62-f874e3610c96" class="">Nobody wants to have war even though it might seem necessary at times. Being forced to be a warrior and infiltrating Paradis Island at a young age, Reiner suffers from a split personality disorder.</p><p id="02f474b1-1963-43b4-aebf-c079830696a7" class="">Though we felt betrayed after discovering Reiner was a spy, we couldn’t help but feel sorry for him. Reiner struggled to convince himself he could be both a soldier and friend to Eren so as to atone for his sins, but at the same time the guilt for carrying out his secret mission as a warrior made him even more conflicted.</p><figure id="d9c2182f-a436-4f25-b8a1-077474341e61" class="image"><a href="https://zula.sg/wp-content/uploads/2021/05/AOT20.jpg"><img src="https://zula.sg/wp-content/uploads/2021/05/AOT20.jpg"/></a></figure><p id="8860f48f-4a3c-434b-8467-6a44cb5453cd" class=""><em>Eren meeting Reiner in Marley 4 years later</em></p><p id="1694ea95-5e60-47f7-9157-850ffc32ce96" class="">Four years later, Eren and Reiner finally reconciled in Marley. This time round, Eren was the one who infiltrated Reiner’s home, making use of Falco to start a war. Coldly, Eren told Reiner that he now understands how Reiner felt all those years ago, saying “I’m the same as you”.</p><p id="57e57941-881c-459e-b8da-aa41719f3c6f" class="">Being brought up from 2 opposing sides, both Eren and Reiner believed they were saving the world. Their inevitable yet unwanted war shows us that fights are never just a one-sided battle —both sides will end up hurting both physically and emotionally.</p><h3 id="0ca2c848-83b2-4a52-a977-69646ae12f40" class="block-color-purple_background"><strong>10. Cherish the importance of family before it’s too late</strong></h3><figure id="584d0c69-e4f5-46de-ad42-c4282505ca7e" class="image"><a href="https://zula.sg/wp-content/uploads/2021/05/AOT14.jpg"><img src="https://zula.sg/wp-content/uploads/2021/05/AOT14.jpg"/></a></figure><p id="221c4fdd-5c06-4310-a4ed-aa8165eba73a" class=""><em>Grisha manipulating his son, Zeke</em></p><p id="e6e00b6b-c439-41b3-8bbc-850bfeae46eb" class="">While we’ve always seen Zeke as an unpredictable and ruthless Beast Titan, his traumatic childhood story was revealed in season 4. His father, Grisha Jeager, forced Zeke to train as a warrior so as to seek revenge onto Marley for killing his sister. Grisha and his wife Dina then set up the Eldian Restorationists, a rebellious organisation to the state.</p><p id="35cdc949-789d-4665-af42-a09d126eac40" class="">As the descendant of the original royal family from his mother’s side, Zeke had to become a warrior and inherit a titan so that he could enhance its powers. Lost in his crazed desire for freedom, Grisha manipulated Zeke and forced the burden of the revolution on him.</p><figure id="80e3f117-95f7-4864-9af9-e96b069f0885" class="image"><a href="https://zula.sg/wp-content/uploads/2021/05/AOT15.jpg"><img src="https://zula.sg/wp-content/uploads/2021/05/AOT15.jpg"/></a></figure><p id="c66c7c6e-9387-460e-865c-74f31bb3f51e" class=""><em>Zeke turning his parents in to the authorities</em></p><p id="6b92a8aa-627e-407f-b7bb-36615e088393" class="">Zeke wasn’t doing well during his warrior training and suffered from immense stress. He craved the attention of loving and attentive parents, yet he was merely used as a tool. Worried about being found out, Zeke was convinced by his friend, Tom Ksaver, to turn his parents in to the Marleyan authorities.</p><p id="f8bfd34c-9dfa-4912-832d-881320198674" class="">At the age of 7, Zeke betrayed his parents, sending them to be transformed into pure titans and secured his place among the warriors as the Beast Titan. Zeke’s character has shown us the importance of familial love, as the absence of it had corrupted Zeke’s childhood while growing up.</p><h3 id="ff2a8508-06e1-4088-b0e0-3532baa52aba" class=""><strong>11. Be kind to others, no matter who they are</strong></h3><figure id="0656d393-d86f-45aa-8e36-1e6bff213fad" class="image"><a href="https://zula.sg/wp-content/uploads/2021/05/AOT16.jpg"><img src="https://zula.sg/wp-content/uploads/2021/05/AOT16.jpg"/></a></figure><p id="6afff599-86b3-4aac-874e-7ebd6488d9ef" class=""><em>Gabi and Falco arguing over the true nature of Eldians</em></p><p id="0fe01cd6-5288-49b8-a74a-91b0c25a41bd" class="">Brought up as a Marleyan warrior, Gabi grows to hate the Eldian race and sees them as “island devils” despite being an Eldian herself. Her hatred led to her being ruthless, rash and cruel. When she was forced into Paradis with Falco, she felt confused as to why Eldians, such as Kaya, would be kind to her. This resulted in her questioning the possibility of a hidden motive.</p><p id="9d933f52-d556-4387-a269-2dc0abebebec" class="">Meanwhile, Falco remains kind to everyone around him, saving Gabi’s life multiple times. For someone who had always looked down on Eldians, Gabi was faced with a rude awakening after Mikasa and Armin saved her and Falco.</p><p id="faae5d8c-db36-4054-abd3-b9c345615b33" class="">No matter who we are and what race we belong to, we should be kind to others just like Falco. A little bit of help goes a long way, even to the point of saving someone’s life.</p><h3 id="503e5c75-212e-4b2c-b7d6-9e693e40bcad" class="block-color-purple_background"><strong>12</strong>. <strong>Question the concept of your own free will</strong></h3><figure id="cbf7067a-11a7-483a-8e9c-f3a687de9e33" class="image"><a href="https://zula.sg/wp-content/uploads/2021/05/AOT18.jpg"><img src="https://zula.sg/wp-content/uploads/2021/05/AOT18.jpg"/></a></figure><p id="86e616bf-5e79-48a0-9d67-7bf1b3d101f9" class="">The peak of season 4 occurs when the original trio falls apart. After speaking to Zeke, Eren questions if everything he has done is out of his own free will, after being forced to eat his father and inherit his titan powers. He meets up with Armin and Mikasa again, but this time round he holds them as hostages.</p><p id="cbe3879e-73ad-4fdd-a843-7633812975a4" class="">Seen as a betrayer who has turned against his people, Eren leads a group of “Jeargerists” to find his own way to achieve freedom.</p><figure id="30d0f2e3-c7db-4305-88d3-c036c2851840" class="image"><a href="https://zula.sg/wp-content/uploads/2021/05/AOT17.jpg"><img src="https://zula.sg/wp-content/uploads/2021/05/AOT17.jpg"/></a></figure><p id="683d8b2c-8a6e-4c50-bcfa-0b480f66e9b5" class=""><em>Eren questioning Armin’s motives</em></p><p id="9f0ceaaf-398e-433b-8d25-62a2b4d0ad3c" class="">The concept of free will and making independent decisions take centre stage here. Eren reveals that Armin has been visiting Annie because he’s influenced by Bertolt’s memories, while Mikasa only lives to protect Eren because of her Ackerman Clan blood. The trio end up fighting, with Eren landing heavy blows onto Armin, leaving Mikasa in tears.</p><p id="4a41cc63-12ac-48fa-8a51-2fecd8508fc8" class="">This intense scene suggests that we are all victims of our own circumstances. All the main characters in Attack On Titan suffer mainly because they are born into this world. It’s ultimately up to us to break out of these chains that tie us down and find our own power from within.</p><p id="9d7a090c-2693-4577-a2b1-1ce66be28250" class=""> Credit: Zula.org</p></div></article></body></html>
